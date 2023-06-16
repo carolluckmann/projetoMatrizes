@@ -1,0 +1,51 @@
+<script>
+    
+    const tamanhoLinhas = Number(prompt(`Quantas linhas você gostaria que sua matriz tivesse? Obs.: máximo 4`));
+    const tamanhoColunas = Number(prompt(`Quantas colunas você gostaria que sua matriz tivesse? Obs.: máximo 4`));
+
+    let matriz = [];
+
+    if(tamanhoLinhas === 2 && tamanhoColunas === 2) {
+        for (let contador = 1; contador <= 4; contador++){
+        let num = Number(prompt(`Insira um número:`));
+        matriz.push(num)
+    }
+    if (matriz[0] === matriz[3] && matriz[1] === matriz[2]){
+            document.write(`Matriz simétrica: ${matriz}`)
+        } else {
+            document.write(`Matriz não simétrica.`)
+        }
+    }
+
+
+    else if(tamanhoLinhas === 3 && tamanhoColunas === 3) {
+        for (let contador = 1; contador <= 9; contador++){
+        let num = Number(prompt(`Insira um número:`));
+        matriz.push(num)
+    }
+
+    if (matriz[1] === matriz[3] && matriz[2] === matriz[6] && matriz[5] === matriz[7]){
+            document.write(`Matriz simétrica: ${matriz}`)
+        } else {
+            document.write(`Matriz não simétrica.`)
+        }
+    }
+
+
+    else if(tamanhoLinhas === 4 && tamanhoColunas === 4) {
+        for (let contador = 1; contador <= 16; contador++){
+        let num = Number(prompt(`Insira um número:`));
+        matriz.push(num)
+    }
+    if (matriz[1] === matriz[4] && matriz[2] === matriz[8] && matriz[3] === matriz[12] && matriz[6] === matriz[9] && matriz[7] === matriz[13] && matriz[11] === matriz[14]){
+            document.write(`Matriz simétrica: ${matriz}`)
+        } else {
+            document.write(`Matriz não simétrica.`)
+        }
+    }
+
+    else {
+        document.write(`O tamanho que você deseja é incompatível. Tente novamente!`)
+    }
+
+</script>
